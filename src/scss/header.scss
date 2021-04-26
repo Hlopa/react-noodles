@@ -1,0 +1,101 @@
+.header {
+  background-color: grey;
+  min-height: 60px;
+  padding: 20px;
+  background: linear-gradient(
+      90deg,
+      rgba(32, 29, 22, 0.8) 0%,
+      rgba(32, 29, 22, 0.8) 10%,
+      rgba(32, 29, 22, 0.2) 50%,
+      rgba(32, 29, 22, 0.8) 90%,
+      rgba(32, 29, 22, 0.8) 100%
+    ),
+    url(../images/header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.header__inner {
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+
+  svg {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.logo__text {
+  margin-left: 20px;
+  display: inline-block;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 38px;
+  span {
+    font-size: 22px;
+    display: block;
+  }
+}
+
+.header__cart {
+  z-index: 3;
+  position: relative;
+  color: #fff;
+  .icon-shopping-cart {
+    font-size: 30px;
+    transition: all 0.1s;
+  }
+  @media (min-width: 992px) {
+    &:hover {
+      .icon-shopping-cart {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+.header__cart-total {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  padding: 5px 10px 8px 20px;
+  z-index: -1;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  background-color: $main-color;
+  height: 35px;
+  min-width: 35px;
+  border-radius: 20px;
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+@media (max-width: 530px) {
+  .header {
+    padding: 20px 34px 20px 6px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  .logo__text {
+    margin-left: 0px;
+    font-size: 32px;
+    span {
+      display: none;
+    }
+  }
+}

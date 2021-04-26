@@ -1,0 +1,27 @@
+.empty-info{
+  text-align: center;
+}
+
+.empty-info__img{
+  img{
+    max-height: 400px;
+  }
+}
+
+.empty-info__title{
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.empty-info__btn{
+  padding: 15px 50px;
+}
+
+@media(max-width: 900px){
+  .empty-info__title{
+    font-size: 31px;
+  }
+  
+}

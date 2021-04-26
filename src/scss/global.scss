@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 40px;
+}
+
+.button{
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 6px;
+  background-color: $main-color;
+  border: none;
+  font-family: "Neucha", cursive;
+  font-size: 22px;
+  color: #fff;
+  transition: all 0.3s;
+  &:hover{
+    background-color: lighten($color: $main-color, $amount: 8);
+  }
+}
+
+@media(max-width: 530px){
+  .container{
+    padding: 0px 20px;
+  }
+}
+
+@media(max-width: 950px){
+  .button{
+    font-size: 19px;
+  }
+
+  .products__buy__bottom-price{
+    font-size: 29px;
+  }
+}
+
+@media(max-width: 380px){
+  
+  .container{
+    padding: 0px 15px;
+  }
+
+}
+
+@media(max-width: 330px){
+  
+  .container{
+    padding: 0px 10px;
+  }
+
+}
