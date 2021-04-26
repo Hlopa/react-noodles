@@ -34,13 +34,10 @@ export const setPizzas = (items) => ({
 
 export const fetchPizzas = (category, sortBy) => (dispatch) => {
   dispatch(setLoaded(false));
-  return axios.get(`/products?${category !== null ? `category=${category}` : ''}&_sort=${sortBy}&_order=asc`).then(resp => {
-    dispatch(setPizzas(resp.data)
-    .catch(err => {
-      console.error(err);
-    }));
-  })
-};
+  return axios.get(`/products?${category !== null ? `category=${category}` : ''}&_sort=${sortBy}&_order=asc`)
+  .then(resp => {
+    dispatch(setPizzas(resp.data))}
+  )};
 
 export const addItemToCart = (itemObj) => ({
   type: ADD_ITEM_TO_CART,
